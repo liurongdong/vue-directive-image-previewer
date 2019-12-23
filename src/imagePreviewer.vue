@@ -173,7 +173,9 @@
     },
     mounted () {
       window.addEventListener('resize', () => {
-        this.setPictureSize()
+        if (this.isShow) {
+          this.setPictureSize()
+        }
       })
     }
   }
